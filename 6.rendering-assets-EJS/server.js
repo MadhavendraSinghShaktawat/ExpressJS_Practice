@@ -13,28 +13,39 @@ app.set("view engine", "ejs");
 
 //? Render Home page/route
 app.get('/', (req, res)=>{
-    res.render('home.ejs');
+    res.render('home');
 });
 
 //? Render About page/route
 app.get('/about', (req, res)=>{
-    res.render('about.ejs');
+    res.render('about');
 });
 
 //? Render Gallery page/route
 app.get('/gallery', (req, res)=>{
-    res.render('gallery.ejs');
+    res.render('gallery');
 });
 
 //? Render Contact page/route
 app.get('/contact', (req, res)=>{
-    res.render('contact.ejs');
+    res.render('contact');
 });
+
 //? Render Contact page/route
 app.get('/users', (req, res)=>{
     //*Summy users data
-    const userData = {name: "Alice", age: 18, isPremiumUser: false, email: "alice@gmail.com", isLogin: false};
-    res.render('userData.ejs', userData);
+    const userData = {name: "Alice", age: 18, isPremiumUser: false, email: "alice@gmail.com", isLogin: true};
+    res.render('userData', userData);
+});
+
+//? Render Products page/route
+app.get('/products', (req, res)=>{
+    const products = [
+        {product: "Laptop", price: 99999},
+        {product: "iPhone 15 Pro Max", price: 110000},
+        {product: "Samsung TV", price: 50000}
+    ]
+    res.render('products', {products});
 });
 
 app.listen(PORT, () => console.log(`Server is working on http://localhost:${PORT}`))
