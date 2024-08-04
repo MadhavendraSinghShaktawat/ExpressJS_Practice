@@ -1,0 +1,24 @@
+{
+  "name": "3.express-routing",
+  "version": "1.0.0",
+  "description": "Learning routing techniques in express js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "Express",
+    "MERN",
+    "stack",
+    "Nodejs",
+    "ExpressJs",
+    "node"
+  ],
+  "author": "Madhavendra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
