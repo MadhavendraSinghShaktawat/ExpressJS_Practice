@@ -8,8 +8,22 @@
 <body>
     <h1>Passing data from server to client.</h1>
     <!-- Accessing data from server -->
+
+    <% if(isLogin){ %>
+
     <h1>Welcome, <%=name%></h1>
     <p>Email: <%=email%></p>
     <p>Age: <%=age%></p>
+
+    <!---Conditionals--->
+    <% if(isPremiumUser){ %>
+        <p>You are a premium user now</p>
+    <% }else{ %>
+        <p>Subscribe to benifit from Premium</p>
+    <% } %>
+    <% }else{ %>
+        <p>Login to see details</p>
+    <% } %>
+
 </body>
 </html>

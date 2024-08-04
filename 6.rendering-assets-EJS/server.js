@@ -33,7 +33,7 @@ app.get('/contact', (req, res)=>{
 //? Render Contact page/route
 app.get('/users', (req, res)=>{
     //*Summy users data
-    const userData = {name: "Alice", age: 18, isPremiumUser: true, email: "alice@gmail.com"};
+    const userData = {name: "Alice", age: 18, isPremiumUser: false, email: "alice@gmail.com", isLogin: false};
     res.render('userData.ejs', userData);
 });
 
