@@ -1,3 +1,4 @@
+//! We can start this server with npm run start
 const express = require('express');
 const app = express();
 const PORT = 8082;
