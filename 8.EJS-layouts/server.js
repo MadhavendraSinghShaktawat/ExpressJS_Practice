@@ -1,5 +1,4 @@
 const express = require('express');
-const ejsLayouts
 const app = express();
 const path = require('path')
 const PORT = 8082;
