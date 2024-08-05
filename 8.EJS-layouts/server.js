@@ -1,4 +1,5 @@
 const express = require('express');
+const ejsLayouts = require('express-ejs-layouts')
 const app = express();
 const path = require('path')
 const PORT = 8082;
@@ -8,6 +9,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //* Setting EJS sigine
 app.set("view engine", "ejs");
+
+//* Plugin the ejs as middleware
+app.use(ejsLayouts);
+app.set('layout', 'layouts/main-layout.ejs')
 
 
 
